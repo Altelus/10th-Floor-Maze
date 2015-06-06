@@ -1,0 +1,75 @@
+// 10 - Floor Spike
+trapType = 10 (for floor spike trap)
+order = either 'n' or 'r' meaning 'n' is for a new tile or 'r' for the same tile creating multiple traps
+trapSubType = 1-8 (depends)
+	1 - faraway edge x-axis
+	2 - close edge x-axis
+	3 - edge left z-axis
+	4 - edge right z-axis
+	5 - middle x-axis
+	6 - middle z-axis
+	7 - diagonal from faraway left to close right
+	8 - diagonal from faraway right to close left
+px,py,pz = percentage of the trap's size with relation to a single tile size
+posx, posy, posz = the percentage of translation to perform on the trap from the origin of the tile 
+		    (percentage is with relation to a single tile size for x and z axis, while for y axis is relative to the stage height)
+pctDamage = (represents percentage of players health that will be either decreased or increased upon collision)
+	     > 0 means health bonus, < 0 means health loss
+noSpikes = number of spikes
+
+//trapType|order|trapSubType|px,py,pz|posx,posy,posz|pctDamage|noSpikes
+e.g.
+10|n|5|0.9,0.1,0.1|0,-0.25,0|-0.20|10;
+
+
+// 20 - Projectile(by default is centered in all axis at origin of the tile's dimensions)
+trapType = 20 (for projectile trap)
+order = either 'n' or 'r' meaning 'n' is for a new tile or 'r' for the same tile creating multiple traps
+trapSubType = 1-6 (depends)
+	DOUBLE_EDGE_SPEAR = 1
+	CROSS = 2
+	STAR = 3
+	DIAGONAL_LTR = 4
+	DIAGONAL_RTL = 5
+	PIECE_WISE = 6
+px,py,pz = percentage of the trap's size with relation to a single tile size
+posx, posy, posz = the percentage of translation to perform on the trap from the origin of the tile 
+		    (percentage is with relation to a single tile size for x and z axis, while for y axis is relative to the stage height)
+pctDamage = (represents percentage of players health that will be either decreased or increased upon collision)
+	     > 0 means health bonus, < 0 means health loss
+mvx,mvy,mvz = percentage for the trap's constant movement with relation to the game's traps
+	      forward speed (i.e. how fast to move for constant movement on the trap)
+rx,ry,rz = percentage for the trap's constant rotation with relation to the game's traps
+	   rotation speed (i.e. how fast to rotate for constant movement on the trap)
+pminx,pmax,pimy,pmaxy,pminz,pmaxz = the amount of movement with relation to a single tiles size
+	for example, if you want to move a trap along the x-axis from current origin of the trap
+	to the left of current tile and right of the current tile back and forth, then would do:
+	-0.5,0.5,0,0,0,0
+
+//trapType|order|trapSubType|px,py,pz|posx,posy,posz|pctDamage|mvx,mvy,mvz|rx,ry|rz|pminx,pmax,pimy,pmaxy,pminz,pmaxz
+
+e.g. creates a star projectile with dimensions of 10% of the tile in all directions, and moving
+to the left edge and right edge of the tile (with only rotation in y axis and moving at the
+speed defined by default) with health loss of 30% upon collision with player
+20|n|3|0.1,0.1,0.1|0,-0.25,0|-0.3|1,0,0|0,1,0|-0.5,0.5,0,0,0,0;
+
+
+// 3 - Atom(by default is centered in all axis at origin of the tile's dimensions)
+trapType = 30 (for atom trap)
+order = either 'n' or 'r' meaning n is for a new tile or r for the same tile creating multiple traps
+trapSubType = 1-6 (depends) Note: this sub type for the embedded projectile for the Atom
+	DOUBLE_EDGE_SPEAR = 1
+	CROSS = 2
+	STAR = 3
+	DIAGONAL_LTR = 4
+	DIAGONAL_RTL = 5
+	PIECE_WISE = 6
+px,py,pz = percentage of the trap's size with relation to a single tile size
+posx, posy, posz = the percentage of translation to perform on the trap from the origin of the tile 
+		    (percentage is with relation to a single tile size for x and z axis, while for y axis is relative to the stage height)
+pctDamage = (represents percentage of players health that will be either decreased or increased upon collision)
+	     > 0 means health bonus, < 0 means health loss
+
+//trapType|order|trapSubType|px,py,pz|posx,posy,posz|pctDamage
+e.g.
+30|n|3|0.3,0.3,0.15|0,-0.25,0|0.35;

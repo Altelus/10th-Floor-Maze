@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5A759BC7-843E-413F-B722-94186E2391AD}</ProjectGuid>
+    <RootNamespace>Controller</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>10thFloor</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dsound.lib;dinput8.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Audio.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Context.cpp" />
+    <ClCompile Include="Design.cpp" />
+    <ClCompile Include="DeviceLight.cpp" />
+    <ClCompile Include="DeviceTexture.cpp" />
+    <ClCompile Include="Display.cpp" />
+    <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="Entry.cpp" />
+    <ClCompile Include="Environment.cpp" />
+    <ClCompile Include="Font.cpp" />
+    <ClCompile Include="Frame.cpp" />
+    <ClCompile Include="Framework.cpp" />
+    <ClCompile Include="Graphic.cpp" />
+    <ClCompile Include="HUD.cpp" />
+    <ClCompile Include="HUDTexture.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Light.cpp" />
+    <ClCompile Include="Lighting.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Segment.cpp" />
+    <ClCompile Include="Sound.cpp" />
+    <ClCompile Include="SoundCard.cpp" />
+    <ClCompile Include="Text.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="UserDialog.cpp" />
+    <ClCompile Include="Utilities.cpp" />
+    <ClCompile Include="VertexList.cpp" />
+    <ClCompile Include="Viewing.cpp" />
+    <ClCompile Include="Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Audio.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Configuration.h" />
+    <ClInclude Include="Context.h" />
+    <ClInclude Include="Design.h" />
+    <ClInclude Include="DeviceLight.h" />
+    <ClInclude Include="DeviceTexture.h" />
+    <ClInclude Include="Display.h" />
+    <ClInclude Include="Engine.h" />
+    <ClInclude Include="Environment.h" />
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="Frame.h" />
+    <ClInclude Include="Framework.h" />
+    <ClInclude Include="Graphic.h" />
+    <ClInclude Include="GraphicsPlatform.h" />
+    <ClInclude Include="HUD.h" />
+    <ClInclude Include="HUDTexture.h" />
+    <ClInclude Include="iAudio.h" />
+    <ClInclude Include="iCamera.h" />
+    <ClInclude Include="iContext.h" />
+    <ClInclude Include="iDesign.h" />
+    <ClInclude Include="iDeviceLight.h" />
+    <ClInclude Include="iDeviceTexture.h" />
+    <ClInclude Include="iDisplay.h" />
+    <ClInclude Include="iEngine.h" />
+    <ClInclude Include="iEnvironment.h" />
+    <ClInclude Include="iFont.h" />
+    <ClInclude Include="iFrame.h" />
+    <ClInclude Include="iFramework.h" />
+    <ClInclude Include="iGraphic.h" />
+    <ClInclude Include="iHUD.h" />
+    <ClInclude Include="iHUDTexture.h" />
+    <ClInclude Include="iInput.h" />
+    <ClInclude Include="iLight.h" />
+    <ClInclude Include="iLighting.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="iObject.h" />
+    <ClInclude Include="iScene.h" />
+    <ClInclude Include="iSegment.h" />
+    <ClInclude Include="iSound.h" />
+    <ClInclude Include="iSoundCard.h" />
+    <ClInclude Include="iText.h" />
+    <ClInclude Include="iTexture.h" />
+    <ClInclude Include="iUserDialog.h" />
+    <ClInclude Include="iUtilities.h" />
+    <ClInclude Include="iVertexList.h" />
+    <ClInclude Include="iViewing.h" />
+    <ClInclude Include="iWindow.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="Lighting.h" />
+    <ClInclude Include="MathDeclarations.h" />
+    <ClInclude Include="MathDefinitions.h" />
+    <ClInclude Include="ModelSettings.h" />
+    <ClInclude Include="ModelSystem.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Segment.h" />
+    <ClInclude Include="Sound.h" />
+    <ClInclude Include="SoundCard.h" />
+    <ClInclude Include="Text.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="UserDialog.h" />
+    <ClInclude Include="VertexList.h" />
+    <ClInclude Include="Viewing.h" />
+    <ClInclude Include="Window.h" />
+    <ClInclude Include="WindowSettings.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Dialog.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
